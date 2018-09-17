@@ -2,11 +2,11 @@ jobs:
 - name: deploy-github-teams
   plan:
   - aggregate:
-    - get: pgr301-infra-as-code
+    - get: PGR301Organisation
       trigger: true
   - task: apply
-    file: pgr301-infra-as-code/concourse/tasks/terraform/task.yml
-    input_mapping: {source: pgr301-infra-as-code}
+    file: PGR301Organisation/concourse/tasks/terraform/task.yml
+    input_mapping: {source: PGR301Organisation}
     params:
       github_token: ((github_token))
       command: apply
@@ -15,8 +15,8 @@ jobs:
 
 resources:
 
-- name: pgr301-infra-as-code
+- name: PGR301Organisation
   type: git
   source:
-    uri: https://github.com/glennbech/pgr301-infra-as-code.git
+    uri: https://github.com/glennbech/PGR301Organisation.git
     branch: master

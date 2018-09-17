@@ -1,6 +1,0 @@
-resources:
-- name: git-repo
-  type: git
-  source:
-    uri: https://github.com/andreasholteritter/PGR_Organisations.git
-    branch: master
