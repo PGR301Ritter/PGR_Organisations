@@ -18,5 +18,5 @@ resources:
 - name: PGR301Organisation
   type: git
   source:
-    uri: https://github.com/glennbech/PGR301Organisation.git
+    uri: https://github.com/andreasholteritter/PGR301Organisation.git
     branch: master
