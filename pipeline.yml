@@ -4,11 +4,3 @@ resources:
   source:
     uri: https://github.com/andreasholteritter/PGR_Organisations.git
     branch: master
-
-jobs:
-- name: job-build-and-verify
-  plan:
-    - get: git-repo
-      trigger: true
-    - task: build-and-verify
-      file: git-repo/ci/mvn-build.yml
